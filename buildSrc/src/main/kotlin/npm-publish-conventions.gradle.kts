@@ -9,7 +9,7 @@ project.afterEvaluate {
         access.set(NpmAccess.PUBLIC)
         packages {
             named("js") {
-                scope.set("dhis2")
+                scope.set("vgarciabnz")
                 packageName.set("rule-engine")
                 readme.set(File("./README.md"))
                 packageJson {
