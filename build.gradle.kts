@@ -41,12 +41,7 @@ kotlin {
     }
     js {
         nodejs()
-        if (project.hasProperty("useCommonJs")) {
-            useCommonJs()
-        } else {
-            useEsModules()
-            generateTypeScriptDefinitions()
-        }
+        useCommonJs()
         binaries.library()
     }
     val hostOs = System.getProperty("os.name")

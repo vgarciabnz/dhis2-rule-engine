@@ -13,14 +13,6 @@ project.afterEvaluate {
                 packageName.set("rule-engine")
                 readme.set(File("./README.md"))
                 packageJson {
-                    "module" by "${project.name}.mjs"
-                    "main" by "${project.name}.js"
-                    "exports" by {
-                        "." by {
-                            "import" by "./${project.name}.mjs"
-                            "require" by "./${project.name}.js"
-                        }
-                    }
                     "contributors" by Props.DEVELOPERS.map { developer ->
                         "${developer.name} <${developer.email}>"
                     }
